@@ -35,15 +35,15 @@
         </div>
     </nav>
 
-    <header>
+    <header class="text-center m-5">
         <h1>Lorem ipsum Boostrap</h1>
         <p>radnom komponenty here</p>
-        <a class="btn btn-outline-primary btn-lg" href="#buttons">Začít</a>
+        <a class="btn btn-outline-primary btn-lg ps-5 pe-5 rounded-5" href="#buttons">Začít</a>
     </header>
 
     <div class="container">
         <div class="row gap-3 justify-content-center">
-            <section id="buttons" class="container bg-body-secondary rounded col-lg col-md col-xs-12">
+            <section id="buttons" class="container bg-body-secondary rounded col-lg col-md col-xs-12 pt-2">
                 <h2>Tlačítka</h2>
                 <p>Styling button you can with class power, např. <code>btn-primary</code>.</p>
                 <div>
@@ -70,22 +70,23 @@
                 </div>
             </section>
         
-            <section id="cards" class="container bg-body-secondary rounded col-lg col-md col-xs-12">
+            <section id="cards" class="container bg-body-secondary rounded col-lg col-md col-xs-12 pt-2">
                 <h2>Karty</h2>
                 <p>Styling cards and content you can with class power, např. <code>btn-primary</code>.</p>
                 <div class="card mx-auto" style="max-width: 400px;">
                     <div class="card-body">
                         <h3 class="card-title">Ukázková karta</h3>
                         <p class="card-text">Random bulshit go: fhuq f ehwowf jfow.</p>
-                        <a class="btn btn-info" href="#">Free malware</a>
+                        <div class="text-end"><a class="btn btn-info" href="#">Free malware</a></div>
+                        
                     </div>
                 </div>
                 <p class="d-inline-flex gap-1 showMeCode">
-                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExampleI" role="button" aria-expanded="false" aria-controls="collapseExample">
                       Zobrazit kód
                     </a>
                 </p>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseExampleI">
                     <pre>
                         <code class="language-html">
                             &lt;div class="card mx-auto"&gt;
@@ -101,7 +102,7 @@
         
             </section>
         
-            <section id="tables" class="container bg-body-secondary rounded col-lg-12 col-xs-12">
+            <section id="tables" class="container bg-body-secondary rounded col-lg-12 col-xs-12 pt-2">
                 <h2>Tabulky</h2>
                 <p>Styling tables you can with class power, např. <code>table-striped</code>.</p>
                 
@@ -133,11 +134,11 @@
                 </table>
         
                 <p class="d-inline-flex gap-1 showMeCode">
-                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExampleII" role="button" aria-expanded="false" aria-controls="collapseExample">
                       Zobrazit kód
                     </a>
                 </p>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseExampleII">
                     <pre>
                         <code class="language-html">
                             &lt;table class="table table-striped table-hover"&gt;
@@ -171,7 +172,7 @@
                 </div>
             </section>
         
-            <section id="acordion" class="container bg-body-secondary rounded col-lg col-md col-xs-12">
+            <section id="acordion" class="container bg-body-secondary rounded col-lg col-md col-xs-12 pt-2">
                 <h2>Acordion</h2>
                 <p>Styling cards and content you can with class power, např. <code>btn-primary</code>.</p>
                 
@@ -203,11 +204,11 @@
                   </div>
         
                   <p class="d-inline-flex gap-1 showMeCode">
-                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseEx" role="button" aria-expanded="false" aria-controls="collapseExample">
                       Zobrazit kód
                     </a>
                 </p>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseEx">
                     <div class="card card-body">
                         <pre>
                             <code class="language-html">
@@ -243,7 +244,7 @@
                 </div>
             </section>
 
-            <section id="alert" class="container bg-body-secondary rounded col-lg col-md col-xs-12">
+            <section id="alert" class="container bg-body-secondary rounded col-lg col-md col-xs-12 pt-2">
                 <h2>Alert</h2>
                 <p>Styling cards and content you can with class power, např. <code>btn-primary</code>.</p>
                 
@@ -279,24 +280,55 @@
                 </div>
         
                   <p class="d-inline-flex gap-1 showMeCode">
-                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExa" role="button" aria-expanded="false" aria-controls="collapseExample">
                       Zobrazit kód
                     </a>
                 </p>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseExa">
                     <div class="card card-body">
                         <pre>
                             <code class="language-html">
-                                
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="d-none"&gt;
+                                &lt;symbol id="check-circle-fill" viewBox="0 0 16 16"&gt;
+                                  &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+                                &lt;/symbol&gt;
+                                &lt;symbol id="info-fill" viewBox="0 0 16 16"&gt;
+                                  &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+                                &lt;/symbol&gt;
+                                &lt;symbol id="exclamation-triangle-fill" viewBox="0 0 16 16"&gt;
+                                  &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+                                &lt;/symbol&gt;
+                            &lt;/svg&gt;
+                              
+                            &lt;div class="alert alert-primary d-flex align-items-center" style="max-height: 4em;" role="alert"&gt;
+                                &lt;svg style="max-width: 2em;" class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"&gt;&lt;use xlink:href="#info-fill"/&gt;&lt;/svg&gt;
+                                &lt;div&gt;
+                                  An example alert with an icon
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="alert alert-success d-flex align-items-center" style="max-height: 4em;" role="alert"&gt;
+                                &lt;svg style="max-width: 2em;" class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"&gt;&lt;use xlink:href="#check-circle-fill"/&gt;&lt;/svg&gt;
+                                &lt;div&gt;
+                                  An example success alert with an icon
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="alert alert-danger d-flex align-items-center" style="max-height: 4em;" role="alert"&gt;
+                                &lt;svg style="max-width: 2em;" class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"&gt;&lt;use xlink:href="#exclamation-triangle-fill"/&gt;&lt;/svg&gt;
+                                &lt;div&gt;
+                                  An example danger alert with an icon
+                                &lt;/div&gt;
+                            &lt;/div&gt;
                             </code>
                         </pre>
                     </div>
                 </div>
             </section>
 
-            <section id="nazor" class="container bg-info-subtle rounded col-lg-10 col-xs-10">
-                <h2 class="text-primary-emphasis">Můj názor</h2>
-                <p class="text-info-emphasis">Styling button you can with class power, např. <code>btn-primary</code>.</p>
+            <section id="nazor" class="container bg-info-subtle rounded col-lg-9 col-xs-10 p-3">
+              <h2 class="text-primary-emphasis">Můj názor</h2>
+              <p class="text-info-emphasis">Bootstrap je fajn nástroj pro rychlou tvorbu jednoduchých webových stránek. Jeho nejvodnější využití pro mě je při tvorbě složitějších komponent, jako je responzivní navigace, modální okna nebo karusely. Ušetří spoustu času, protože nabízí hotová řešení, která by jinak vyžadovala psaní vlastního <span class="fw-bold">CSS</span> a <span class="fw-bold">JavaScriptu</span>.</p>
+              <p class="text-info-emphasis">Na druhou stranu má i své nevýhody. Často vede k <span class="text-danger fw-semibold">nepřehlednému HTML</span>, což může ztížit údržbu. Navíc je příliš omezující, pokud se chcete odchýlit od předpřipravených stylů, tak zabere spoustu času a může dojít k rozhození již aplikovaných stylů, což může vést k psaní spousty vlastních úprav a přepisování výchozích pravidel.</p>
+              <p class="text-info-emphasis">Co se týče tvorby <span class="text-primary">responzivního layoutu</span>, Bootstrap sice nabízí grid systém a různé breakpoints, ale přijde mi, že nenabízí dostatečnou kontrolu a flexibilitu. V některých případech je jednodušší a efektivnější vytvořit layout ručně.</p>
                 
             </section>
         </div>
@@ -310,8 +342,8 @@
               
     
 
-    <footer class="text-center bg-dark text-light">
-        <p>source: <a href="https://getbootstrap.com/">Boostrap</a></p>
+    <footer class="text-center bg-dark text-light mt-5">
+        <p>source: <a class="link-info" href="https://getbootstrap.com/">Boostrap</a></p>
     </footer>
 
 
