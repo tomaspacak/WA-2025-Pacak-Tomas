@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../views/books/book_create.php">Přidat knihu</a>
+                            <a class="nav-link" href="../views/books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../../controllers/books_list.php">Výpis knih</a>
@@ -36,8 +36,6 @@
         </nav>
         <h2>Výpis knih</h2>
         <?php if(!empty($books)): ?>
-            <h3>Hrubý výpis</h3>
-            <?php var_dump($books); ?>
             <h3>Hrubý výpis+</h3>
             <pre><?php print_r($books); ?></pre>
             <h3>výpis Pro+</h3>
