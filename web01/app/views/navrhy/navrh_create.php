@@ -47,7 +47,9 @@
                 </div>
             </div>
         </div>
-        <a class="btn" href=".">Zpět na domocskou stránku</a>
+        
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="../../../index.html">HomePage</a></button>
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="../../controllers/navrhy_list.php">Zobrazit navrhy</a></button>
     </div>
 
     <!-- Bootstrap JS -->

@@ -1,7 +1,7 @@
 <?php
 require_once '../models/database.php';
 require_once '../models/navrh.php';
-
+//provede ulozeni dat dle pokynu od model, input od navrh
 class navrhController {
     private $db;
     private $navrhModel;
@@ -43,7 +43,8 @@ class navrhController {
 
             // Uložení knihy do DB - dočasné řešení, než budeme mít výpis knih
             if ($this->navrhModel->create($kategory, $theme, $email)) {
-                header("Location: /WA-2025-Pacak-Tomas/web01/app/views/navrhy/navrh_create.php");
+                //header("Location: /WA-2025-Pacak-Tomas/web01/app/views/navrhy/navrh_create.php");
+                header("Location: ../controllers/navrhy_list.php"); //odeslani dat pro vypsani
                 exit();
             
             } else {
@@ -59,6 +60,11 @@ class navrhController {
                 echo "Chyba při ukládání knihy.";
             }
         }
+    }
+
+    public function listBooks () {
+        $navrhy = $this->navrhModel->getAll();
+        include '../views/navrhy/navrhy_list.php';
     }
 }
 
