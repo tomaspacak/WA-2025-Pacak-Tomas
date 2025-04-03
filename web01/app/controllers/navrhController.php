@@ -43,7 +43,7 @@ class navrhController {
 
             // Uložení knihy do DB - dočasné řešení, než budeme mít výpis knih
             if ($this->navrhModel->create($kategory, $theme, $email)) {
-                header("Location: /03-php-projekt/web01/app/views/navrhy/navrh_create.php");
+                header("Location: /WA-2025-Pacak-Tomas/web01/app/views/navrhy/navrh_create.php");
                 exit();
             
             } else {
