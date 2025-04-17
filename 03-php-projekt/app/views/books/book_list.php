@@ -30,6 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../../controllers/books_list.php">Výpis knih</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../auth/register.php">Registrace</a>
+                        </li>
                     </ul>
                 </div>
             </div>
