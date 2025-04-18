@@ -31,4 +31,33 @@ class navrh {
         $stmt->execute();
         return  $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getById($id) {
+        $sql = "SELECT * FROM du WHERE id = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function update($id, $theme, $kategory, $email) {
+        $sql = "UPDATE du 
+                SET theme = :theme,
+                    kategory = :kategory,
+                    email = :email,
+                WHERE id = :id";
+    
+        $stmt = $this->db->prepare($sql);
+        return $stmt->execute([
+            ':id' => $id,
+            ':theme' => $theme,
+            ':kategory' => $kategory,
+            ':email' => $email,
+        ]);
+    }
+
+    public function delete($id) {
+        $sql = "DELETE FROM du WHERE id = :id";
+        $stmt = $this->db->prepare($sql);
+        return $stmt->execute([':id' => $id]);
+    }
 }

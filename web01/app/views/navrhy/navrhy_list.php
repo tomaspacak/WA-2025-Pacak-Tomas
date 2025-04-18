@@ -44,6 +44,7 @@
         
         
         <button type="button" class="btn btn-primary"><a style="color: white;" href="../../index.html">HomePage</a></button>
+        <button type="button" class="btn btn-primary"><a style="color: white;" href="../views/navrhy/navrhy_edit_delete.php">Editace</a></button>
     </div>
 
     <!-- Bootstrap JS -->
