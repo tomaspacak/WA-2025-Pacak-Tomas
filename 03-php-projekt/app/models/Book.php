@@ -12,8 +12,12 @@ class Book {
         // Dvojtečka označuje pojmenovaný parametr => Místo přímých hodnot se používají placeholdery.
         // PDO je pak nahradí skutečnými hodnotami při volání metody execute().
         // Chrání proti SQL injekci (bezpečnější než přímé vložení hodnot).
-        $sql = "INSERT INTO books (title, author, category, subcategory, year, price, isbn, description, link, images, user_id) 
-                VALUES (:title, :author, :category, :subcategory, :year, :price, :isbn, :description, :link, :images, :user_id)";
+       // Vkládáme i user_id, abychom měli vazbu na uživatele
+       $sql = "INSERT INTO books (
+                title, author, category, subcategory, year, price, isbn, description, link, images, user_id
+            ) VALUES (
+                :title, :author, :category, :subcategory, :year, :price, :isbn, :description, :link, :images, :user_id
+            )";
         
         $stmt = $this->db->prepare($sql);
         

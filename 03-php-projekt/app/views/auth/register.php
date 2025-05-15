@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../views/books/book_create.php">Přidat knihu</a>
+                            <a class="nav-link" href="../books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../../controllers/book_list.php">Výpis knih</a>
