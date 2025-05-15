@@ -1,6 +1,36 @@
 <?php
 
+
 class User {
+    private $db;
+
+    public function __construct($db) {
+        $this->db = $db;
+    }
+
+    public function existsByUsername($username) {
+        $stmt = $this->db->prepare("SELECT id FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        return $stmt->fetch() !== false;
+    }
+
+    public function register($username, $email, $password_hash, $name = null, $surname = null) {
+        $stmt = $this->db->prepare("
+            INSERT INTO users (username, email, password_hash, name, surname)
+            VALUES (?, ?, ?, ?, ?)
+        ");
+        return $stmt->execute([$username, $email, $password_hash, $name, $surname]);
+    }
+
+    //login
+    public function findByUsername($username) {
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+}
+
+/*class User {
     private $db;
 
     public function __construct($db) {
@@ -22,7 +52,7 @@ class User {
             ':email' => $email ?: null,
             ':name' => $name ?: null,
             ':surname' => $surname ?: null,
-            ':password_hash' => $password_hash,
+            ':password' => $password,
         ]);
     }
 
@@ -42,13 +72,13 @@ class User {
     }*/
 
     //nahrani novych dat
-    public function update($id, $username, $email, $name, $surname, $password_hash) {
+    /*public function update($id, $username, $email, $name, $surname, $password_hash) {
         $sql = "UPDATE users 
                 SET username = :username,
                     email = :email,
                     name = :name,
                     surname = :surname,
-                    password_hash = :password_hash,
+                    password = :password,
                 WHERE id = :id";
     
         $stmt = $this->db->prepare($sql);
@@ -58,7 +88,7 @@ class User {
             ':username' => $username,
             ':name' => $name,
             ':surname' => $surname,
-            ':password_hash' => $password_hash,
+            ':password' => $password,
         ]);
     }
 
@@ -67,4 +97,7 @@ class User {
         $stmt = $this->db->prepare($sql);
         return $stmt->execute([':id' => $id]);
     }*/
-}
+
+    
+
+/*}   */

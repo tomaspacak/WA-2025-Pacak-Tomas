@@ -64,13 +64,13 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="password_hash" class="form-label">Heslo <span class="text-danger">*</span></label>
-                                <input type="text" id="password_hash" name="password_hash" class="form-control" required>
+                                <label for="password" class="form-label">Heslo <span class="text-danger">*</span></label>
+                                <input type="text" id="password" name="password" class="form-control" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="price" class="form-label">Potvrzení hesla <span class="text-danger">*</span></label>
-                                <input type="text" id="price" name="price" class="form-control" step="0.01" required>
+                                <label for="password_confirm" class="form-label">Potvrzení hesla <span class="text-danger">*</span></label>
+                                <input type="text" id="password_confirm" name="password_confirm" class="form-control" step="0.01" required>
                             </div>
 
                             <button type="submit" class="btn btn-success w-100">Registrovat se</button>
@@ -79,7 +79,22 @@
                 </div>
             </div>
         </div>
+    <!-- Kontrola hesel v JS -->
+    <script>
+        const form = document.getElementById('registrationForm');
+        const password = document.getElementById('password');
+        const confirm = document.getElementById('password_confirm');
+        const message = document.getElementById('passwordMatchMessage');
 
+        form.addEventListener('submit', function (e) {
+            if (password.value !== confirm.value) {
+                e.preventDefault();
+                message.classList.remove('d-none');
+            } else {
+                message.classList.add('d-none');
+            }
+        });
+    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     

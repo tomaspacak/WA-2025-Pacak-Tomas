@@ -14,6 +14,11 @@ class BookController {
 
     public function createBook() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (!isset($_SESSION['user_id'])) {
+                die("Uživatel není přihlášen.");
+            }
+            $userId = $_SESSION['user_id'];
+
             $title = htmlspecialchars($_POST['title']);
             $author = htmlspecialchars($_POST['author']);
             $category = htmlspecialchars($_POST['category']);
