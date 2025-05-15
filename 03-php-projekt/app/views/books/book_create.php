@@ -5,6 +5,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: ../../controllers/book_list.php");
     exit();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="cs">
@@ -36,14 +37,14 @@ if (!isset($_SESSION['user_id'])) {
                             <a class="nav-link" href="../../views/books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../controllers/book_list.php">Výpis knih</a>
+                            <a class="nav-link" href="./book_list.php">Výpis knih</a>
                         </li>
+                        <?php if (isset($_SESSION['username'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="../auth/register.php">Registrace</a>
+                            <a class="nav-link" href="../views/books/books_edit_delete.php">Editace a mazání</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../controllers/book_list.php">Přihlášení</a>
-                        </li>
+                        <?php endif; ?>
+                        
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <?php if (isset($_SESSION['username'])): ?>

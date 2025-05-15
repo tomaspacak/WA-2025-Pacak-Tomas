@@ -77,10 +77,12 @@ class BookController {
                 header("Location: ../controllers/book_list.php");
                 exit();
             } else {
-            
+                echo "Chyba při ukládání knihy.";
+            }  
         }
     }
 
+    
     public function listBooks () {
         $books = $this->bookModel->getAll();
         include '../views/books/book_list.php';

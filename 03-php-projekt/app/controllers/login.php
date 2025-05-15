@@ -24,7 +24,9 @@
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
 
-            header("Location: ../controllers/book_list.php");
+            /*header("Location: ../controllers/book_list.php");*/
+            header("Location: ../views/books/book_list.php");
+            
             exit();
         } else {
             die('Neplatné přihlašovací údaje.');
