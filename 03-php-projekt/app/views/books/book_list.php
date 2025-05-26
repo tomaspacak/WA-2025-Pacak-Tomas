@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../../controllers/book_list.php");
-    exit();
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="cs">
@@ -34,11 +31,16 @@ if (!isset($_SESSION['user_id'])) {
                     
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./book_create.php">Přidat knihu</a>
+                            <a class="nav-link" href="../views/books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../controllers/books_list.php">Výpis knih</a>
+                            <a class="nav-link" href="./book_list.php">Výpis knih</a>
                         </li>
+                        <?php if (isset($_SESSION['username'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/books/books_edit_delete.php">Editace a mazání</a>
+                        </li>
+                        <?php endif; ?>
                         
                         
                     </ul>
@@ -48,14 +50,14 @@ if (!isset($_SESSION['user_id'])) {
                                 <span class="nav-link text-white">Přihlášen jako: <strong><?= htmlspecialchars($_SESSION['username']) ?></strong></span>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../../controllers/logout.php">Odhlásit se</a>
+                                <a class="nav-link" href="./logout.php">Odhlásit se</a>
                             </li>
                         <?php else: ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="../../views/auth/login.php">Přihlášení</a>
+                                <a class="nav-link" href="../views/auth/login.php">Přihlášení</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../../views/auth/register.php">Registrace</a>
+                                <a class="nav-link" href="../views/auth/register.php">Registrace</a>
                             </li>
                         <?php endif; ?>
                     </ul>

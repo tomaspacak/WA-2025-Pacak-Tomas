@@ -37,11 +37,11 @@ if (!isset($_SESSION['user_id'])) {
                             <a class="nav-link" href="../../views/books/book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./book_list.php">Výpis knih</a>
+                            <a class="nav-link" href="../../controllers/book_list.php">Výpis knih</a>
                         </li>
                         <?php if (isset($_SESSION['username'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="../views/books/books_edit_delete.php">Editace a mazání</a>
+                            <a class="nav-link" href="./books_edit_delete.php">Editace a mazání</a>
                         </li>
                         <?php endif; ?>
                         

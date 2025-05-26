@@ -2,7 +2,7 @@
 
 class Database {
     private $host = "localhost";
-    private $db_name = "wa_2025_tp_01";
+    private $db_name = "wa_2025_tp";
     private $username = "root";
     private $password = "";
     public $conn;
@@ -22,7 +22,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             // Výpis informace o úspěšném připojení (pro testování)
-            echo "Připojení k databázi bylo úspěšné!<br>";
+            //echo "Připojení k databázi bylo úspěšné!<br>";
             
         } catch (PDOException $exception) {
             echo "Chyba připojení: " . $exception->getMessage();

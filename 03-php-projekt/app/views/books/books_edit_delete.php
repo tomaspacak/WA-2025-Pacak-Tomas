@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
 
 
 if (!isset($_SESSION['user_id'])) {
@@ -57,14 +54,16 @@ if (isset($_GET['edit'])) {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../views/books/book_create.php">Přidat knihu</a>
+                            <a class="nav-link" href="./book_create.php">Přidat knihu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../controllers/books_list.php">Výpis knih</a>
+                            <a class="nav-link" href="../../controllers/book_list.php">Výpis knih</a>
                         </li>
+                        <?php if (isset($_SESSION['username'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../auth/register.php">Registrace</a>
+                            <a class="nav-link" href="./books_edit_delete.php">Editace a mazání</a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <?php if (isset($_SESSION['username'])): ?>
